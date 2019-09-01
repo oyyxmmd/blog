@@ -1,11 +1,16 @@
 
 let searchM = document.getElementById('searchMove');
 let searchIn = document.getElementById('search');
+searchM.addEventListener('mouseenter',search);
+searchM.addEventListener('mouseleave',search);
+
 searchIn.addEventListener('blur',hideInput);
+let timer1;
 function search(){
     /**
      * 问题：定时器未清楚 引起事件错乱
      */
+    clearInterval(timer1);
     if (searchM.offsetWidth >80 ) {
         searchM.style.width = '80px';
         // document.addEventListener('click',hideInput);
@@ -23,7 +28,7 @@ function search(){
     else if (searchM.offsetWidth === 80) {
         searchM.style.width = '250px';
         
-        setTimeout(() => searchIn.focus(),500);
+        timer1 = setTimeout(() => searchIn.focus(),500);
         // document.addEventListener('click',hideInput);
         // let add = setInterval(function () {
         //     if (searchM.offsetWidth < 250) {
