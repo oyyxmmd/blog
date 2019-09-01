@@ -1,0 +1,198 @@
+// 页面正文字体颜色
+@theme-font-color: rgb(84, 86, 82);
+// 标题颜色
+@theme-title-color: blck;
+//全局背景
+@theme-global-bgc: rgb(255, 255, 255);
+
+@theme-border-color: rgb(245, 242, 242);
+
+// 
+/* 初始化页面 */
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: black;
+    letter-spacing: 0.1em;
+}
+
+h1 {
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    /*  */
+
+}
+
+html {
+    height: 100%;
+}
+
+header {
+    @height: 60px;
+    @link: rgb(111, 111, 111);
+    @link-hover: red;
+    @padding-lr: 20px;
+    @border-color: rgb(217, 220, 227);
+    @menu-color: black;
+    @menu-color-hover: rgb(111, 111, 111);
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: @theme-global-bgc;
+    z-index: 1;
+
+    >.logo {
+        width: 150px;
+        height: 100%;
+        float: left;
+        margin: 0px;
+        padding: 0px;
+
+        >a {
+            display: block;
+            height: 100%;
+            text-align: center;
+        }
+    }
+
+    >nav {
+        height: 100%;
+
+        >ul {
+            margin: 0px;
+            padding: 0px;
+            float: left;
+
+            >li {
+                box-sizing: border-box;
+                float: left;
+                /* background-color: aqua; */
+                height: 100%;
+                line-height: @height;
+                padding: 0px @padding-lr;
+            }
+
+            >li:hover {
+                cursor: pointer;
+                a{
+                   
+                }
+            }
+        }
+
+
+
+
+    }
+
+    >.search {
+        height: 30px;
+        /* border: 20px; */
+        outline: 0px;
+        outline-color: white;
+
+    }
+
+    .search-lists {
+        >option {
+            width: 190px;
+            background-color: aliceblue;
+            color: aqua;
+        }
+    }
+
+    >.link {
+        float: left;
+    }
+
+    >.right {
+        float: right;
+
+        >ul {
+            >li {
+                width: 80px;
+                transition: width 0.5s;
+
+                .list {
+                    width: 30px;
+                    // background-color: black;
+                    border: 2px solid @menu-color;
+                    border-radius: 2px;
+                    margin-bottom: 8px;
+                }
+
+                .list:last-child {
+                    margin: 0px;
+                }
+
+                a {
+                    >div {
+                        height: 32px;
+                        /*add*/
+                        padding-top: 14px;
+
+                        paddi>div:hover {
+                            .list {
+                                border-color: rgb(167, 238, 140);
+
+                            }
+                        }
+                    }
+
+                }
+            }
+            >li:first-child {
+                //
+                height: @height;
+                margin: 0px;
+                overflow: hidden;
+
+                span {
+                    box-sizing: border-box;
+                    display: inline-block;
+                    padding: 0px;
+                    margin: 0px;
+                    height: 56px;
+                    vertical-align: middle;
+
+                    img {
+                        margin-top: 14px;
+                    }
+                }
+
+                input {
+                    box-sizing: border-box;
+                    padding-left: 10px;
+                    outline: 0px;
+                    height: 40px;
+                    border: 1px solid @border-color;
+                    border-radius: 5px;
+                    margin-left: 5px;
+                    font-size: 18px;
+                    width: 165px;
+                }
+            }
+
+            >li:hover {
+                .list {
+                    border-color: @menu-color-hover;
+
+                }
+
+            }
+
+
+            
+        }
+    }
+}
