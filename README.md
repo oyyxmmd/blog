@@ -1,2 +1,1 @@
-[hello](http://carryguan.me/flex-add/fb1.html)
-asdadadasdasd
+[主页](https://oyyxmmd.github.io/blog/静态页面/index.html)
