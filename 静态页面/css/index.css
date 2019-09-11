@@ -23,7 +23,6 @@ body{
     margin: 0px;
     height: 100%；
     /*  */
-    
 }
 html{
     height: 100%；
@@ -38,6 +37,7 @@ header{
     top: 0px;
     background-color: white;
     z-index: 1;
+    min-width: 1200px;
 }
 
 /* 导航 */
@@ -162,7 +162,7 @@ header .right ul li:first-child input{
 }
 
 
-/* 右边测拉篮 */
+/* 右边侧拉栏 */
 .sidebar_right{
     position: fixed;
     top: 0px;
@@ -170,7 +170,7 @@ header .right ul li:first-child input{
     height: 100%;
     width: 0px;
     overflow: hidden;
-    background-color: rgb(226, 231, 226);
+    background-color:rgb(143, 142, 142);
     z-index: 999;
     transition: width 0.5s;
 }
@@ -183,8 +183,15 @@ header .right ul li:first-child input{
 .sidebar_right nav>ul>li{
     text-align: center;
     line-height: 60px;
-    background-color: rgb(156, 116, 116);
+    /* background-color: rgb(255, 255, 255); */
     cursor: pointer;
+    transition: 0.25s;
+}
+.sidebar_right nav>ul>li:hover{
+    background-color: black;
+}
+.sidebar_right nav>ul>li>a{
+    color: white;
 }
 /* 透明 遮罩 */
 .body_mask{
